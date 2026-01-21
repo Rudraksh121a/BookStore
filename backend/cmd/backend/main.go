@@ -28,6 +28,7 @@ func main() {
 	router.HandleFunc("GET /api/health", books.New())
 	router.HandleFunc("POST /api/users/register", books.Register(cfg))
 	router.HandleFunc("POST /api/users/login", books.Login(cfg))
+	router.HandleFunc("POST /api/books", books.CreateBook(cfg))
 
 	//start server
 
