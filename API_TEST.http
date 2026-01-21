@@ -20,3 +20,15 @@ Content-Type: application/json
   "password": "Test@1234"
 }
 
+### Create Book (requires authentication)
+POST http://localhost:8082/api/books
+Content-Type: application/json
+Authorization: Bearer YOUR_JWT_TOKEN
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "genre": "Classic",
+  "coverimage": "https://example.com/cover.jpg",
+  "file": "https://example.com/book.pdf"
+}
