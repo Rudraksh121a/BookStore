@@ -12,10 +12,11 @@ type HTTPServer struct {
 	Addr string `yaml:"address" env:"ADDRESS" env-default:"localhost:8082"`
 }
 type Config struct {
-	Env         string `yaml:"env" env:"ENV" env-required:"true" env-default:"PROD"`
-	URL         string `yaml:"URL" env:"URL" env-required:"true"`
-	DBName      string `yaml:"DB_NAME" env:"DB_NAME" env-required:"true"`
-	HTTPServer  `yaml:"http_server" env-required:"true"`
+	Env        string `yaml:"env" env:"ENV" env-required:"true" env-default:"PROD"`
+	URL        string `yaml:"URL" env:"URL" env-required:"true"`
+	DBName     string `yaml:"DB_NAME" env:"DB_NAME" env-required:"true"`
+	JWT_SECRET string  `yaml:"JWT_SECRET" env:"JWT_SECRET" env-required:"true"`
+	HTTPServer `yaml:"http_server" env-required:"true"`
 }
 
 func MustLoad() *Config {

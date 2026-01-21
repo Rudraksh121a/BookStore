@@ -1,5 +1,6 @@
 env: "dev"
 URL: "mongodb://admin:password@localhost:27017"
 DB_NAME: "BookStoreDB"
+JWT_SECRET: "your_jwt_secret_key"
 http_server:
   address: "localhost:8082"
