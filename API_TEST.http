@@ -1,1 +1,13 @@
-GET http://localhost:8082
+#To check the health status of the API server
+# GET http://localhost:8082//api/health
+
+
+POST http://localhost:8082/api/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "Test@1234"
+}
+

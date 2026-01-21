@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/Rudraksh121a/BookStore/internal/config"
+	"github.com/Rudraksh121a/BookStore/internal/http/handlers/books"
 )
 
 func main() {
@@ -24,9 +25,8 @@ func main() {
 	//setup router
 	router := http.NewServeMux()
 
-	router.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello world"))
-	})
+	router.HandleFunc("GET /api/health", books.New())
+	router.HandleFunc("POST /api/users/register", books.Register(cfg))
 
 	//start server
 
