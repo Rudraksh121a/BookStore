@@ -1,0 +1,14 @@
+go.work
+.env
+.env.local
+.env.*.local
+.vscode/
+.DS_Store
+node_modules/
+dist/
+build/
+coverage/
+logs/
+*.log
+storage/
+*.sqlite

@@ -1,0 +1,5 @@
+env: "dev"
+URL: "mongodb://admin:password@localhost:27017"
+DB_NAME: "BookStoreDB"
+http_server:
+  address: "localhost:8082"
